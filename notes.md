@@ -67,3 +67,17 @@ ReactDOM.render(element, document.getElementById("root"));
 <span style="color:#59afe1">**React.js**</span> использует язык JSX, а точнее:
 
 JSX - расширение синтаксиса JavaScript, которое позволяет использовать HTML-подобный синтаксис для описания структуры интерфейса.
+
+# Урок 4 Dynamic Values in Templates
+
+Можно задать значение заранее:
+
+```js
+  const title = "Welcome to the new blog";
+```
+
+А затем выдать его, используя следующий синтексис JSX:
+
+```html
+<h1> { title }</h1>
+```
