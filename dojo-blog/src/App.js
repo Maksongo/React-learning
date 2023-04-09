@@ -3,6 +3,7 @@ import "./App.css";
 function App() {
   const title = "Welcome to the new blog";
   const likes = 50;
+  const link = 'https://google.com';
   // const person = {name: 'yoshi', age: 30}; - нельзя будет вывести в { person } в h1
 
   return (
@@ -17,6 +18,8 @@ function App() {
         <p>{ 'hello ninjas!' }</p>
         <p>{ [1,2,3,4,5]}</p>
         <p>{ Math.random() * 10}</p>
+
+        <a href={link}>Google site</a>
       </div>
     </div>
   );

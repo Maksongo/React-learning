@@ -88,7 +88,7 @@ const likes = 50;
 
 Нельзя выводить: booleans, objects
 
-## Можно задать Динамические значения ( Dynamic Values ) просто в { } фигурные скобки:
+## Можно задать Динамические значения ( Dynamic Values ) просто в { } фигурные скобки - Они будут выведены как string:
 
 ```html
 <p>{ 10 }</p>
@@ -97,4 +97,9 @@ const likes = 50;
 <p>{ Math.random() * 10}</p>
 ```
 
-Они будут выведены как string
+## ( Element Tags ) Задаём значение атрибута в переменной заранее - вызываем при необходимости:
+
+```js
+const link = "https://google.com";
+<a href={link}>Google site</a>
+```
