@@ -101,5 +101,13 @@ const likes = 50;
 
 ```js
 const link = "https://google.com";
-<a href={link}>Google site</a>
+<a href={link}>Google site</a>;
 ```
+
+# Урок 5 Multiple Components
+
+App. JS - это корневой компонент ( root component )
+
+Все остальные компоненты вкладываются в него. Следующие компоненты, будут вкладываться по родительской системе
+
+<image src="md-imgs/root_component.png" alt="React logo" width="50%">
