@@ -146,3 +146,30 @@ import Name from "./Name";
 ```js
 import "./App.css";
 ```
+
+## Добавлять стили можно в общий файл index.css, как при работе с простым JS:
+
+```css
+.links a{
+  background-color: black;
+}
+```
+
+## так же есть способ Inline styling:
+
+Из
+
+```html
+<a href="/create">New blog</a>
+```
+
+В
+
+```html
+<a href="/create" style={{
+  color: "white",
+  backgroundColor: "#f1356d",
+  borderRadius: '8px'
+}}>New blog</a>
+```
+Здесь мы использовали Dynamic Value в самом Navbar.js
