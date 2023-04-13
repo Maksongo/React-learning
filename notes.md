@@ -130,11 +130,19 @@ export default Name;
 - импортируем наш компонент в App.js
 
 ```js
-import Navbar from "./Navbar";
+import Name from "./Name";
 ```
 
 - Вызываем его в корневом App
 
 ```js
-<Navbar />
+<Name />
+```
+
+# Урок 6 Adding Styles
+
+Можно смело удалить App.css и не забыть удалить из App.js:
+
+```js
+import "./App.css";
 ```
