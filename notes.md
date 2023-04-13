@@ -150,7 +150,7 @@ import "./App.css";
 ## Добавлять стили можно в общий файл index.css, как при работе с простым JS:
 
 ```css
-.links a{
+.links a {
   background-color: black;
 }
 ```
@@ -172,4 +172,63 @@ import "./App.css";
   borderRadius: '8px'
 }}>New blog</a>
 ```
+
 Здесь мы использовали Dynamic Value в самом Navbar.js
+
+# Урок 7 Click Events
+
+## Выведение сообщения в консоль кликом на кнопку:
+
+- Создаем функцию:
+
+```js
+const handleClick = () => {
+  console.log("hello, world!");
+};
+```
+
+- Назначаем вызов функции на кнопку:
+
+```
+<button onClick={handleClick}>click me</button>
+
+<!-- {handleClick()} - не пишем () внутри, так как это автоматически вызовит функцию, без нажатия на кнопку -->
+```
+
+## Можно создать анонимную фунцию прямо в кнопке
+
+```
+<button onClick={() =>{
+  console.log('Goodbye, World!')
+}}>Click me again</button>
+```
+
+## Вызываем функцию со значением в () с помощью анонимной функции:
+
+- Создаем функцию:
+
+```js
+const handleClickAgain = (name) => {
+    console.log('hello ' + name);
+}
+```
+
+- Вызываем её кликом
+
+```
+<button onClick={() => handleClickAgain('Max')}>Click me again</button>
+```
+
+## Event object OR Event parameter
+
+```js
+const handleClickAgain = (name, e) => {
+    console.log('hello ' + name, e.target);
+}
+
+<button onClick={(e) => handleClickAgain('Max', e)}>Click me again</button>
+```
+
+Результатом данного кода будет:
+
+<image src="md-imgs/anom_func_etarg.png" alt="React logo">
