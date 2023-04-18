@@ -207,7 +207,7 @@ const handleClick = () => {
 
 - Создаем функцию:
 
-```js
+```
 const handleClickAgain = (name) => {
     console.log('hello ' + name);
 }
@@ -221,7 +221,7 @@ const handleClickAgain = (name) => {
 
 ## Event object OR Event parameter
 
-```js
+```
 const handleClickAgain = (name, e) => {
     console.log('hello ' + name, e.target);
 }
@@ -232,3 +232,42 @@ const handleClickAgain = (name, e) => {
 Результатом данного кода будет:
 
 <image src="md-imgs/anom_func_etarg.png" alt="React logo">
+
+# Урок 8 Using State (useState hook)
+
+<font size = 3>Состояние компонента это - данные, используемые в этом компоненте в этот момент времени </font>
+
+## Даннный код изменит перменную name, но не отобразит её обновленное состояние на сайте:
+
+```
+let name = 'mario';
+
+const handleClick = () => {
+    name = 'luigi';
+    console.log(name);
+}
+
+    return ( 
+        <div className="home">
+        <p>{ name }</p>
+        <button onClick={handleClick}>click me</button>
+        </div>
+     );
+```
+
+## Чтобы это исправить необходимо использовать "useState hook"
+
+Хук useState() отвечает за работу с состоянием внутри компонента. В отличие от классовых компонентов, хук занимается сразу всем: инициализацией, обновлением и предоставляет доступ к состоянию. 
+
+- Импортируем в наш js файл - данную библиотеку:
+
+```
+import { useState } from 'react';
+```
+
+- Создаем хук в основе страницы + всовываем перменнную в то место, где ходим видеть её на сайте:
+
+```
+const [name, setName] = useState('mario');
+```
+

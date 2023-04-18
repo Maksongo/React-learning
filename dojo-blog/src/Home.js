@@ -1,18 +1,17 @@
+import { useState } from 'react';
+
 const Home = () => {
+    const [name, setName] = useState('mario');
 
 const handleClick = () => {
-    console.log('hello, world!')
-}
-
-const handleClickAgain = (name, e) => {
-    console.log('hello ' + name, e.target);
+    setName('luigi')
 }
 
     return ( 
         <div className="home">
         <h2>Homepage</h2>
+        <p>{ name }</p>
         <button onClick={handleClick}>click me</button>
-        <button onClick={(e) => handleClickAgain('Max', e)}>Click me again</button>
         </div>
      );
 }
